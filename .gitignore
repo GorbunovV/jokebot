@@ -1,0 +1,9 @@
+node_modules/
+.env
+storage/sent-jokes.json
+logs/
+dist/
+.DS_Store
+
+.claude
+.idea
