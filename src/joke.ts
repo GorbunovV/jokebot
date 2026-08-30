@@ -13,7 +13,7 @@ export class AllDuplicatesError extends Error {
 const sleep = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
 
 async function requestJoke(category: string, maxApiRetries: number): Promise<Joke> {
-  const url = `${JOKE_API_BASE}/${encodeURIComponent(category)}?lang=en&format=json&blacklistFlags=nsfw,sexist`;
+  const url = `${JOKE_API_BASE}/${encodeURIComponent(category)}?lang=en&format=json`;
   let lastErr: unknown;
 
   for (let attempt = 1; attempt <= maxApiRetries; attempt++) {
